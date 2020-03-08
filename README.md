@@ -1,6 +1,6 @@
 # python-paginate
 Pagination support for python web frameworks (study from will_paginate).
-It requires Python2.6+ as string.format syntax.
+It requires Python 3.x
 
 Supported CSS: `bootstrap2&3&4`, `foundation`, `semanticui`, `ink`, `uikit` and `metro4`
 
