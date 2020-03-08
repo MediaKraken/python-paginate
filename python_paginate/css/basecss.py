@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+
 
 INIT_KEYS = 'size align extra head end normal actived gap gap_marker \
 prev_label next_label prev_disabled next_disabled prev_normal next_normal\

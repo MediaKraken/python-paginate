@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+
 import sys
 
-_basestring = str if (sys.version_info[0] == 3) else basestring
+_basestring = str if (sys.version_info[0] == 3) else str
 
 
 class BasePagination(object):
@@ -280,7 +280,7 @@ class BasePagination(object):
     @property
     def pages(self):
         if self.total_pages < self.inner_window * 2 - 1:
-            return range(1, self.total_pages + 1)
+            return list(range(1, self.total_pages + 1))
 
         pages = []
         win_from = self.page - self.inner_window
@@ -296,21 +296,21 @@ class BasePagination(object):
                 win_to = self.total_pages
 
         if win_from > self.inner_window:
-            pages.extend(range(1, self.outer_window + 1 + 1))
+            pages.extend(list(range(1, self.outer_window + 1 + 1)))
             pages.append(None)
         else:
-            pages.extend(range(1, win_to + 1))
+            pages.extend(list(range(1, win_to + 1)))
 
         if win_to < self.total_pages - self.inner_window + 1:
             if win_from > self.inner_window:
-                pages.extend(range(win_from, win_to + 1))
+                pages.extend(list(range(win_from, win_to + 1)))
 
             pages.append(None)
-            pages.extend(range(self.total_pages - 1, self.total_pages + 1))
+            pages.extend(list(range(self.total_pages - 1, self.total_pages + 1)))
         elif win_from > self.inner_window:
-            pages.extend(range(win_from, self.total_pages + 1))
+            pages.extend(list(range(win_from, self.total_pages + 1)))
         else:
-            pages.extend(range(win_to + 1, self.total_pages + 1))
+            pages.extend(list(range(win_to + 1, self.total_pages + 1)))
 
         return pages
 

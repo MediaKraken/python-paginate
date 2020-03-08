@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import unicode_literals
+
 import sys
 from flask import request, url_for, Markup, current_app
 from python_paginate.web import base_paginate
