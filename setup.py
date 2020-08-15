@@ -6,8 +6,10 @@ Pagination support for python web frameworks (study from will_paginate).
 Supported CSS: bootstrap2&3&4, foundation, ink, uikit and semanticui, metro4
 Supported web frameworks: Flask, Tornado, Sanic
 """
+
 import io
 import os.path
+
 from setuptools import setup
 
 work_dir = os.path.dirname(os.path.abspath(__file__))
@@ -40,7 +42,6 @@ setup(
         'Programming Language :: Python',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 3',
     ]
 )

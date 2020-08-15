@@ -25,10 +25,8 @@ class BasePagination(object):
     _href = None
     _search = False
     _show_single_page = False
-    _display_msg = 'displaying <b>{start} - {end}</b> {record_name} in \
-    total <b>{total}</b>'
-    _search_msg = 'found <b>{total}</b> {record_name} \
-    displaying <b>{start} - {end}</b>'
+    _display_msg = 'Displaying <b>{start} - {end}</b> {record_name} in total <b>{total}</b>'
+    _search_msg = 'Found <b>{total}</b> {record_name} Displaying <b>{start} - {end}</b>'
     _info_head = '<div class="pagination-page-info">'
     _info_end = '</div>'
 
