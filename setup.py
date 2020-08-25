@@ -3,7 +3,7 @@ python-paginate
 -----------------
 
 Pagination support for python web frameworks (study from will_paginate).
-Supported CSS: bootstrap2&3&4, foundation, ink, uikit and semanticui, metro4
+Supported CSS: bootstrap4, foundation, ink, uikit and semanticui, metro4
 Supported web frameworks: Flask, Tornado, Sanic
 """
 

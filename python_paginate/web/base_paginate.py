@@ -92,7 +92,7 @@ class BasePagination(object):
         self.page_name = kwargs.get('page_name', self._page_name)
         self.per_page_name = kwargs.get('per_page_name', self._per_page_name)
         self.page = kwargs.get(self.page_name, 1)
-        self.per_page = int(kwargs.get(self.per_page_name, 10))
+        self.per_page = int(kwargs.get(self.per_page_name, 30))
         self.max_per_page = int(kwargs.get('max_per_page', self._max_per_page))
         if self.per_page > self.max_per_page:
             self.per_page = self.max_per_page
@@ -155,14 +155,7 @@ class BasePagination(object):
                 css_class = uikit.UIKit
             elif 'bootstrap' in css_framework:
                 import python_paginate.css.bootstrap as bootstrap
-                if '2' in css_framework:
-                    css_class = bootstrap.Bootstrap2
-                elif '3' in css_framework:
-                    css_class = bootstrap.Bootstrap3
-                elif '4' in css_framework:
-                    css_class = bootstrap.Bootstrap4
-                else:
-                    css_class = bootstrap.Bootstrap3
+                css_class = bootstrap.Bootstrap4
             else:
                 import python_paginate.css.bootstrap as bootstrap
                 css_class = bootstrap.Bootstrap3
